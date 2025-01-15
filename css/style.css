@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background: black;
+	color: #fff;
+	line-height: 1.6;
+}
+/* Utilitarios */
+.wrapper {
+	min-height: 100vh;
+	background: linear-gradient(
+			to bottom,
+			rgba(0, 221, 255, 0.8),
+			rgba(181, 64, 255, 0.9)
+		),
+		url(../images/background.jpg) no-repeat center/cover;
+}
+/* Navbar Header */
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+.logo img {
+	width: 90px;
+	margin: 20px 15px;
+}
+nav .contact {
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	gap: 25px;
+	font-size: 15px;
+	color: #fff;
+}
+nav .contact i {
+	margin-right: 10px;
+}
+
+nav .twitter i:hover {
+	color: purple;
+	cursor: pointer;
+}
+
+/* Main Content */
+.main {
+	display: flex;
+	gap: 50px;
+	max-width: 1100px;
+	margin: 200px auto;
+	justify-content: center;
+	align-items: start;
+	height: 100%;
+	padding: 0 40px;
+}
+.main form {
+	flex: 1;
+}
+.form-inputs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 14px;
+}
+.form-info input {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px 5px;
+	border: none;
+	opacity: 0.5;
+	outline: 0;
+	margin: 10px 0 0 0;
+}
+.form-info textarea {
+	display: block;
+	width: 100%;
+	height: 100px;
+	opacity: 0.5;
+	border-radius: 5px;
+	resize: none;
+	outline: 0;
+	margin: 10px 0 0 0;
+	padding: 10px 5px;
+}
+.form-info {
+	margin: 10px 0;
+}
+.hero-text {
+	flex: 1;
+	margin-top: 50px;
+}
+.hero-text h1 {
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+.form-inputs .btn {
+	text-decoration: none;
+	border: none;
+	margin-top: 20px;
+	text-align: center;
+	border-radius: 20px;
+	padding: 10px;
+	background: rgb(66, 198, 255);
+	font-weight: bold;
+	color: #fff;
+	transition: 0.3s;
+}
+.btn:hover {
+	transform: scale(1.05);
+}
+@media (max-width: 768px) {
+	nav {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.main {
+		margin: auto;
+		flex-direction: column-reverse;
+	}
+	.main form {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	input {
+		width: 100%;
+	}
+	.hero-text h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.hero-text p {
+		text-align: justify;
+	}
+}
+@media (max-width: 500px) {
+	.contact {
+		flex-direction: column;
+	}
+	.hero-text h1 {
+		font-size: 30px;
+	}
+}
